@@ -1,0 +1,11 @@
+<launch>
+	<node name="stage" pkg="stage_ros" type="stageros"
+	      args="$(find lab5)/world/playground2.world" />
+	<node name="evader" pkg="lab5" type="evader2.py" args="$(find lab5)/world/playground2.world"/>
+	<node name="tf_broadcaster" pkg="lab5"
+	type="tf_broadcaster.py" output="screen" args="$(find lab5)/world/playground2.world"/>
+	<node name="tf_broadcaster2" pkg="lab5"
+	type="tf_broadcaster2.py" output="screen" args="$(find lab5)/world/playground2.world"/>
+	<node name="pursuer" pkg="lab5" type="pursuer.py" args="$(find lab5)/world/playground2.world" />
+
+</launch>

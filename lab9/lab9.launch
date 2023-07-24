@@ -1,0 +1,4 @@
+<launch>
+	<node name="robot" pkg="lab9" type="motion_observation.py" output="screen" />
+
+</launch>
